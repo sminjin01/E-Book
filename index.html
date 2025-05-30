@@ -3,14 +3,16 @@
 <head>
 <title>E-Book</title>
 <meta name="viewport" content="width = 1050, user-scalable = no" />
-<script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
+<link rel="stylesheet" href="css/magazine.css">
+
+<!-- <script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
 <script type="text/javascript" src="extras/jquery-ui-1.8.20.custom.min.js"></script>
 <script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
 <script type="text/javascript" src="lib/hash.js"></script>
 <script type="text/javascript" src="lib/turn.min.js"></script>
 <script type="text/javascript" src="lib/zoom.min.js"></script>
 <script type="text/javascript" src="js/magazine.js"></script>
-<link rel="stylesheet" href="css/magazine.css">
+<link rel="stylesheet" href="css/magazine.css"> -->
 <!-- <script type="text/javascript" src="../../extras/jquery.min.1.7.js"></script>
 <script type="text/javascript" src="../../extras/jquery-ui-1.8.20.custom.min.js"></script>
 <script type="text/javascript" src="../../extras/modernizr.2.5.3.min.js"></script>
@@ -393,15 +395,29 @@ function loadApp() {
 
 // Load the HTML4 version if there's not CSS transform
 
-yepnope({
-	test : Modernizr.csstransforms,
-	yep: ['../../lib/turn.min.js'],
-	nope: ['../../lib/turn.html4.min.js', 'css/jquery.ui.html4.css'],
-	both: ['../../lib/zoom.min.js', 'css/jquery.ui.css', 'js/magazine.js', 'css/magazine.css'],
-	complete: loadApp
-});
+
+
+// yepnope({
+// 	test : Modernizr.csstransforms,
+// 	yep: ['../../lib/turn.min.js'],
+// 	nope: ['../../lib/turn.html4.min.js', 'css/jquery.ui.html4.css'],
+// 	both: ['../../lib/zoom.min.js', 'css/jquery.ui.css', 'js/magazine.js', 'css/magazine.css'],
+// 	complete: loadApp
+// });
 
 </script>
+
+<script src="extras/jquery.min.1.7.js"></script>
+  <script src="extras/jquery-ui-1.8.20.custom.min.js"></script>
+  <script src="extras/modernizr.2.5.3.min.js"></script>
+  <script src="lib/turn.min.js"></script>
+  <script src="lib/zoom.min.js"></script>
+  <script src="lib/hash.js"></script>
+  <script src="js/magazine.js"></script>
+
+  <script>
+    loadApp(); // turn.js 로딩 완료 후 실행
+  </script>
 
 </body>
 </html>
